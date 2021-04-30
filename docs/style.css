@@ -25,6 +25,7 @@ h1 {
 }
 .f3 {
    font-weight: 400;
+<<<<<<< HEAD
 }
 .f4 {
    font-weight: 500;
@@ -45,6 +46,28 @@ h1 {
 #values {
    grid-area: b;
 }
+=======
+}
+.f4 {
+   font-weight: 500;
+}
+.f5 {
+   font-weight: 600;
+}
+.f6 {
+   font-weight: 700;
+}
+.f7 {
+   font-weight: 800;
+}
+.f8 {
+   font-weight: 900;
+}
+
+#values {
+   grid-area: b;
+}
+>>>>>>> 18f2e27d71542fd3f546420007d20150768da652
 
 #values a{
    display: inline-flex;
