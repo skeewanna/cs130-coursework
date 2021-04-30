@@ -1,0 +1,188 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    display: grid;
+    overflow: hidden;
+    margin: 0px;
+
+    grid-template-columns: 250px auto;
+    grid-template-rows: calc(100vh - 100px) 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 250px;
+}
+
+sidebar {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+header{
+  justify-content: flex-end;
+  flex-direction: row;
+  font-family: 'Helvetica', sans-serif;
+  height: 100px;
+  align-items: center;
+
+}
+header #upgrade {
+  border: solid 2px white;
+  border-radius: 20px;
+}
+header #profile {
+  border: solid 2px white;
+  border-radius: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: row;
+
+}
+
+#featured-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+
+#featured-content {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+.artist-card {
+  padding: 20px;
+  padding-bottom: 50px;
+  width: 20%;
+  align-items: center;
+  justify-items: center;
+
+}
+.artist-card div {
+  background: #222;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.artist-card img {
+  width: 95%;
+  height: auto;
+  border-radius: 90px;
+
+}
+
+.artist-card p {
+  color: #ddd
+}
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+@media (max-width: 1024px) {
+.artist-card {
+  border-radius: 5px;
+  width: 30.33%;
+}}
+
+@media (max-width: 780px) {
+.artist-card {
+  width: 50%;}
+
+aside {
+  display: none;}
+}
+/* Your Code Here */
